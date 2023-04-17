@@ -32,7 +32,7 @@ const AuthForm = () => {
     let url; 
     if (isLogin) {
       url =
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBLAZfI3knkbyxNuEyi2t-QrjiOXbPCZVc';
+      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB0a1CXL6SvaRj0wzPycig1PD6v5LNdXg8';
     } else {
       // fetch(
       //   'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBLAZfI3knkbyxNuEyi2t-QrjiOXbPCZVc',
@@ -48,7 +48,7 @@ const AuthForm = () => {
       //     },
       //   })
       url =
-      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBLAZfI3knkbyxNuEyi2t-QrjiOXbPCZVc';
+      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB0a1CXL6SvaRj0wzPycig1PD6v5LNdXg8';
       }
      fetch(url, {
          method: 'POST',

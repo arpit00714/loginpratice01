@@ -1,22 +1,26 @@
-import './App.css'
-import { Route, Routes } from 'react-router-dom';
+import "./App.css";
+import { useContext } from "react";
 
-import Layout from './components/Layout/Layout';
-import UserProfile from './components/Profile/UserProfile';
-import AuthPage from './Pages/AuthPage';
-import HomePage from './Pages/HomePage';
+import { Routes, Route } from "react-router-dom";
+
+import Layout from "./components/Layout/Layout";
+import UserProfile from "./components/Profile/UserProfile";
+import AuthPage from "./Pages/AuthPage";
+import HomePage from "./Pages/HomePage";
+import AuthContext from "./store/auth-context";
 
 function App() {
-  return (
-    <Layout >
-      <Routes>
+  // const authCtx = useContext(AuthContext);
 
-        <Route path='/' element={<HomePage />} />
+  return (
+    <Layout>
+      <Routes>
+      <Route path='/' element={<HomePage />} />
         <Route path='/auth' element={
           <AuthPage />} />
         <Route path='/profile' element={<UserProfile />} />
 
-      </Routes>
+      </Routes> 
     </Layout>
   );
 }
