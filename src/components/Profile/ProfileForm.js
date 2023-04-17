@@ -1,8 +1,12 @@
 import classes from './ProfileForm.module.css';
 import { useRef, useContext } from 'react';
 import AuthContext from '../../store/auth-context';
+import { useNavigate } from 'react-router-dom';
+
 
 const ProfileForm = () => {
+  const history = useNavigate();
+
   const newPasswordInputRef = useRef();
   const authCtx = useContext(AuthContext);
   
@@ -13,7 +17,7 @@ const ProfileForm = () => {
 
      // add validation
 
-     fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=[API_KEY]', {
+     fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBLAZfI3knkbyxNuEyi2t-QrjiOXbPCZVc', {
      method: 'POST',
      body: JSON.stringify({
       idToken: authCtx.token,
@@ -26,7 +30,7 @@ const ProfileForm = () => {
     }).then(res => {
       //assumpion: always succeeds!
 
-     
+      history('/');
     });
   };
 
